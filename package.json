@@ -1,0 +1,22 @@
+{
+  "name": "easy",
+  "version": "0.0.1",
+  "description": "Simple build tools by Electron",
+  "main": "main.js",
+  "scripts": {
+    "dev": "sh config/dev.sh",
+    "build": "sh config/build.sh",
+    "start": "cross-env NODE_ENV=development electron .",
+    "build:mac": "cross-env NODE_ENV=production electron-packager ./ EASY --platform=darwin --arch=x64 --ignore=src/node_modules --electronVersion=1.4.13 --overwrite --icon=./logo/cli.icns",
+    "appdmg": "appdmg appdmg.json ~/Desktop/EASY.dmg"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^3.0.0",
+    "shelljs": "^0.7.7"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.7.0"
+  }
+}
