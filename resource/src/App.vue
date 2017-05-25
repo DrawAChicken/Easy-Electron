@@ -1,9 +1,9 @@
 <template>
 	<div id="app">
-		<img src="./assets/logo.png">
-		<h1></h1>
-		<h1>Easy-Electron</h1>
-		<h2>快速构建Electron+vue的CLI</h2>
+		<div id="title"></div>
+		<transition enter-active-class="animated bounceInUp">
+			<router-view class="page"></router-view>
+		</transition>
 	</div>
 </template>
 
@@ -15,24 +15,19 @@
 			}
 		},
 		created() {
-			console.log(this.$ipc)
+			// console.log(this.$remote.dialog.showOpenDialog({ properties: [ 'openFile', 'openDirectory', 'multiSelections' ]}));
+			// console.log(this.$remote)
 		}
 	}
 </script>
 
 <style>
-	#app {
-		font-family: 'Avenir', Helvetica, Arial, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
+	#title{
+		height: 20px;
+		width: 100%;
 		text-align: center;
-		color: #2c3e50;
-		margin-top: 60px;
-	}
-	img{
-		width: 300px;
-	}
-	h1, h2 {
-		font-weight: normal;
+		font-size: 14px;
+		padding: 4px 0 0;
+		-webkit-app-region: drag;
 	}
 </style>
