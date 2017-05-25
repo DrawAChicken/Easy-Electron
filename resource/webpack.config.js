@@ -36,7 +36,7 @@ module.exports = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
-        loader: 'url-loader',
+        loader: 'file-loader',
         query: {
             name: '[name].[ext]'
         }

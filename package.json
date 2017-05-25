@@ -10,8 +10,22 @@
     "build:mac": "cross-env NODE_ENV=production electron-packager ./ EASY --platform=darwin --arch=x64 --ignore=src/node_modules --electronVersion=1.4.13 --overwrite --icon=./logo/cli.icns",
     "appdmg": "appdmg appdmg.json ~/Desktop/EASY.dmg"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrawAChicken/Easy-Electron.git"
+  },
+  "keywords": [
+    "Electron",
+    "easy",
+    "Electron-cli",
+    "electron-vue"
+  ],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrawAChicken/Easy-Electron/issues"
+  },
+  "homepage": "https://github.com/DrawAChicken/Easy-Electron/blob/master/README.md",
   "dependencies": {
     "cross-env": "^3.0.0",
     "shelljs": "^0.7.7"
