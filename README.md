@@ -10,7 +10,7 @@ git clone https://github.com/DrawAChicken/Easy-Electron
 cd Easy-Electron
 
 # Install dependencies
-npm install
+npm install  # 推荐yarn！！ npm install会生产多余文件，使体积增大
 
 # Run the app
 First =>  npm run dev  #运行wbpack热更新
@@ -20,7 +20,11 @@ Then  =>  npm start    #运行electron
 First =>  npm run build             #先打包静态文件
 Then  =>  npm run build:electron    #打包electron
 ```
-#### 开始写吧
-> resource文件就是Vue
+### 开始吧！
+- resource文件就是Vue  
+- 关于node和electron的API 封装在config/api里   
+- 在resource里引用，一看便知  
+- 在vue打包完后，会在目录下生产dist文件，文件包含所有静态资源  
+- 可以在打包Electron时将resource删除
 
 求star 求Issues
