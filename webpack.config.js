@@ -3,12 +3,13 @@ var webpack = require('webpack');
 var isPro = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './resource/src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: isPro ? './dist/' : '/dist/', 
+    publicPath: isPro ? '../dist/' : '/dist/', 
     filename: 'build.js'
   },
+  devtool: false,
   module: {
     rules: [
       {
@@ -72,7 +73,7 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
+      sourceMap: false,
       compress: {
         warnings: false
       }

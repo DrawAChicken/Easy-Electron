@@ -1,6 +1,5 @@
 node_modules
-resource/node_modules
-resource/dist
+dist
 .vscode
 pack
 rule_custom

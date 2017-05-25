@@ -4,10 +4,10 @@
   "description": "Simple build tools by Electron",
   "main": "main.js",
   "scripts": {
-    "dev": "sh config/dev.sh",
-    "build": "sh config/build.sh",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules && cp ./resource/index.html ./dist/ && cp ./resource/remote.js ./dist/",
     "start": "cross-env NODE_ENV=development electron .",
-    "build:mac": "cross-env NODE_ENV=production electron-packager ./ EASY --platform=darwin --arch=x64 --ignore=resource/node_modules --electronVersion=1.4.13 --overwrite --icon=./logo/cli.icns",
+    "build:electron": "electron-packager ./ EASY --platform=darwin --arch=x64 --ignore=node_modules --electronVersion=1.4.13 --overwrite --icon=./logo/cli.icns",
     "appdmg": "appdmg appdmg.json ~/Desktop/EASY.dmg"
   },
   "repository": {
@@ -18,7 +18,8 @@
     "Electron",
     "easy",
     "Electron-cli",
-    "electron-vue"
+    "electron-vue",
+    "vue-electron"
   ],
   "author": "",
   "license": "ISC",
@@ -27,10 +28,27 @@
   },
   "homepage": "https://github.com/DrawAChicken/Easy-Electron/blob/master/README.md",
   "dependencies": {
-    "cross-env": "^3.0.0",
-    "shelljs": "^0.7.7"
+    "vue": "^2.2.1",
+    "vue-router": "^2.5.3",
+    "vuex": "^2.3.1"
   },
   "devDependencies": {
-    "electron-packager": "^8.7.0"
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-preset-latest": "^6.0.0",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.28.2",
+    "electron-packager": "^8.7.0",
+    "element-ui": "^1.3.4",
+    "file-loader": "^0.9.0",
+    "node-sass": "^4.5.0",
+    "normalize.css": "^7.0.0",
+    "sass-loader": "^5.0.1",
+    "style-loader": "^0.18.1",
+    "url-loader": "^0.5.8",
+    "vue-loader": "^11.1.4",
+    "vue-template-compiler": "^2.2.1",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
   }
 }
