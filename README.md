@@ -20,5 +20,7 @@ Then  =>  npm start    #运行electron
 First =>  npm run build             #先打包静态文件
 Then  =>  npm run build:electron    #打包electron
 ```
+#### 开始写吧
+> resource文件就是Vue
 
 求star 求Issues
