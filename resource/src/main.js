@@ -3,7 +3,6 @@ import App from './App.vue';
 import Router from './router';
 import Store from './store';
 import ElementUI from 'element-ui';
-// import 'normalize.css';
 
 Vue.use(ElementUI);
 Vue.prototype.$ipc = global.ipcRenderer || {};

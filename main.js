@@ -25,7 +25,6 @@ function createWindow() {
     }
     else {
         mainWindow.loadURL(`file://${__dirname}/resource/index.html`);
-        mainWindow.webContents.openDevTools();        
     }
     mainWindow.webContents.on('did-finish-load', () => {
         mainWindow.show();

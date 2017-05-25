@@ -7,7 +7,7 @@
     "dev": "sh config/dev.sh",
     "build": "sh config/build.sh",
     "start": "cross-env NODE_ENV=development electron .",
-    "build:mac": "cross-env NODE_ENV=production electron-packager ./ EASY --platform=darwin --arch=x64 --ignore=src/node_modules --electronVersion=1.4.13 --overwrite --icon=./logo/cli.icns",
+    "build:mac": "cross-env NODE_ENV=production electron-packager ./ EASY --platform=darwin --arch=x64 --ignore=resource/node_modules --electronVersion=1.4.13 --overwrite --icon=./logo/cli.icns",
     "appdmg": "appdmg appdmg.json ~/Desktop/EASY.dmg"
   },
   "repository": {
